@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login</title>
+  <title>Login | Roberts Company</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -15,32 +15,43 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url('<?= base_url() . "public/image/BG2.jpg"; ?>') no-repeat center center/cover;
+      background: linear-gradient(135deg, #0b1d3a, #1f3a66);
       padding: 20px;
     }
 
     .glass-container {
       width: 100%;
-      max-width: 420px;
+      max-width: 460px;
       padding: 40px;
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(14px);
       border-radius: 20px;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      box-shadow: 0 12px 28px rgba(30, 86, 49, 0.25);
+      border: 1px solid rgba(245, 197, 24, 0.3);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
       text-align: center;
-      animation: fadeIn 0.8s ease;
+      animation: fadeIn 0.5s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Company Name */
+    .company-name {
+      font-size: 1.9em;
+      font-weight: 700;
+      color: #f5c518;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     }
 
     h2 {
-      font-size: 1.9em;
-      font-weight: 700;
-      color: #1e5631;
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #ffffff;
       margin-bottom: 25px;
       letter-spacing: 0.5px;
     }
@@ -54,23 +65,22 @@
     .form-group input {
       width: 100%;
       padding: 12px 14px;
-      border: 1.5px solid #a38b00;
+      border: 1.5px solid #f5c518;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.8);
-      color: #1e5631;
+      background: rgba(255, 255, 255, 0.9);
+      color: #0b1d3a;
       font-size: 15px;
       transition: 0.3s ease;
       box-sizing: border-box;
     }
 
     .form-group input:focus {
-      border-color: #1e5631;
-      box-shadow: 0 0 8px rgba(30, 86, 49, 0.35);
-      background: #fff;
+      border-color: #1f3a66;
+      box-shadow: 0 0 8px rgba(245, 197, 24, 0.5);
       outline: none;
     }
 
-    /* Eye icon */
+    /* Eye Icon */
     .toggle-password {
       position: absolute;
       right: 14px;
@@ -78,12 +88,12 @@
       transform: translateY(-50%);
       cursor: pointer;
       font-size: 1.2em;
-      color: #a38b00;
+      color: #1f3a66;
       transition: color 0.3s ease;
     }
 
     .toggle-password:hover {
-      color: #1e5631;
+      color: #f5c518;
     }
 
     /* Button */
@@ -92,21 +102,21 @@
       padding: 14px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(135deg, #1e5631, #a38b00);
+      background: linear-gradient(135deg, #1f3a66, #f5c518);
       color: #fff;
       font-size: 1.1em;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 6px 12px rgba(30, 86, 49, 0.35);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
 
     .btn-submit:hover {
-      background: #144423;
       transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245, 197, 24, 0.4);
     }
 
-    /* Error message */
+    /* Error Message */
     .error-message {
       background: rgba(255, 0, 0, 0.1);
       border: 1px solid rgba(255, 0, 0, 0.3);
@@ -119,13 +129,14 @@
       text-align: center;
     }
 
-    /* Bottom text */
+    /* Bottom Text */
     .text-center {
       margin-top: 20px;
+      color: #ddd;
     }
 
     .text-center a {
-      color: #ffffffff;
+      color: #f5c518;
       font-weight: 600;
       text-decoration: none;
       transition: 0.3s;
@@ -133,12 +144,20 @@
 
     .text-center a:hover {
       text-decoration: underline;
-      color: #a38b00;
+      color: #fff;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 25px;
+      color: #ccc;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <div class="glass-container">
+    <div class="company-name">Roberts Company</div>
     <h2>Login</h2>
 
     <?php if (!empty($error)): ?>
@@ -159,11 +178,12 @@
     </form>
 
     <div class="text-center">
-      <p>
-        Don’t have an account? 
+      <p>Don’t have an account? 
         <a href="<?= site_url('auth/register'); ?>">Register here</a>
       </p>
     </div>
+
+    <p class="footer-note">© 2025 Roberts Company</p>
   </div>
 
   <script>

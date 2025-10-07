@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Update User</title>
+  <title>Update User | Roberts Company</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -12,7 +12,7 @@
       min-height: 100vh;
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background: url('<?= base_url() . "public/image/BG5.jpg"; ?>') no-repeat center center/cover;
+      background: linear-gradient(135deg, #0b1d3a, #1f3a66);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,12 +23,11 @@
       width: 100%;
       max-width: 500px;
       padding: 40px;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
       border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(30, 86, 49, 0.25);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 215, 0, 0.3);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
       animation: fadeIn 0.5s ease-in-out;
     }
 
@@ -40,9 +39,10 @@
     .glass-container h1 {
       font-size: 2em;
       font-weight: 600;
-      color: #1e5631;
-      margin-bottom: 30px;
+      color: #f5c518;
       text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
     }
 
     .form-group {
@@ -54,20 +54,19 @@
     .form-group select {
       width: 100%;
       padding: 12px 14px;
-      border: 1px solid #d4af37;
+      border: 1px solid #f5c518;
       border-radius: 12px;
       font-size: 14px;
-      background: rgba(255, 255, 255, 0.8);
-      color: #144423;
-      transition: 0.3s ease;
+      background: rgba(255, 255, 255, 0.9);
+      color: #0b1d3a;
       box-sizing: border-box;
-      box-shadow: inset 0 2px 6px rgba(212, 175, 55, 0.15);
+      transition: 0.3s ease;
     }
 
     .form-group input:focus,
     .form-group select:focus {
-      border-color: #1e5631;
-      box-shadow: 0 0 8px rgba(30, 86, 49, 0.3);
+      border-color: #1f3a66;
+      box-shadow: 0 0 8px rgba(245, 197, 24, 0.5);
       outline: none;
     }
 
@@ -78,7 +77,7 @@
       transform: translateY(-50%);
       cursor: pointer;
       font-size: 1.1em;
-      color: #1e5631;
+      color: #1f3a66;
     }
 
     .btn-submit {
@@ -86,24 +85,25 @@
       padding: 14px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(135deg, #1e5631, #a38b00);
+      background: linear-gradient(135deg, #1f3a66, #f5c518);
       color: #fff;
       font-size: 1.1em;
-      font-weight: 500;
+      font-weight: 600;
       cursor: pointer;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn-submit:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(30, 86, 49, 0.3);
+      box-shadow: 0 8px 20px rgba(245, 197, 24, 0.4);
     }
 
     .btn-return {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 22px;
-      background: #1e5631;
+      background: #1f3a66;
       color: #fff;
       border-radius: 10px;
       text-decoration: none;
@@ -112,9 +112,16 @@
     }
 
     .btn-return:hover {
-      background: #144423;
+      background: #0b1d3a;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(20, 68, 35, 0.3);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 25px;
+      color: #ccc;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -146,6 +153,7 @@
       <button type="submit" class="btn-submit">Update User</button>
     </form>
     <a href="<?= site_url('/users'); ?>" class="btn-return">Cancel</a>
+    <p class="footer-note">© 2025 Roberts Company</p>
   </div>
 
   <script>

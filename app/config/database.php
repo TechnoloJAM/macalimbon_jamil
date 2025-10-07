@@ -63,23 +63,24 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
     'port'		=> '3306',
     'username'	=> 'root',
     'password'	=> '',
-    'database'	=> 'crudnew',
-    'charset'	=> 'utf8mb4',
-    'dbprefix'	=> '',
-    // Optional for SQLite
-    'path'      => ''*/
-
-    $database['main'] = array(
-    'driver'	=> 'mysql',
-    'hostname'	=> 'sql12.freesqldatabase.com',
-    'port'		=> '3306',
-    'username'	=> 'sql12800591',
-    'password'	=> '7RKSjwS3yi',
-    'database'	=> 'sql12800591',
+    'database'	=> 'crudlab',
     'charset'	=> 'utf8mb4',
     'dbprefix'	=> '',
     // Optional for SQLite
     'path'      => ''
-);
+);*/
+
+$database['main'] = array(
+    'driver'	=> 'mysql',
+    'hostname'	=> 'sql12.freesqldatabase.com',
+    'port'		=> '3306',
+    'username'	=> 'sql12801724',
+    'password'	=> '8rSux9QsYM',
+    'database'	=> 'sql12801724',
+    'charset'	=> 'utf8mb4',
+    'dbprefix'	=> '',
+    // Optional for SQLite
+    'path'      => ''
+    );
 
 ?>

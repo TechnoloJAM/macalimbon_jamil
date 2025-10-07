@@ -39,7 +39,7 @@ defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
             $q = trim($this->io->get('q'));
         }
 
-        $records_per_page = 10;
+        $records_per_page = 5;
 
     // Get paginated users
     $users = $this->UsersModel->page($q, $records_per_page, $page);
