@@ -15,7 +15,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0b1d3a, #1f3a66);
+      background-color: #0b1d3a; /* Solid navy background */
       padding: 20px;
     }
 
@@ -23,11 +23,11 @@
       width: 100%;
       max-width: 460px;
       padding: 40px;
-      background: rgba(255, 255, 255, 0.08);
+      background-color: #ffffff15; /* Slight transparent white */
       backdrop-filter: blur(14px);
       border-radius: 20px;
-      border: 1px solid rgba(245, 197, 24, 0.3);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      border: 1px solid #f5c51850;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
       text-align: center;
       animation: fadeIn 0.5s ease-in-out;
     }
@@ -67,7 +67,7 @@
       padding: 12px 14px;
       border: 1.5px solid #f5c518;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.9);
+      background: #ffffff;
       color: #0b1d3a;
       font-size: 15px;
       transition: 0.3s ease;
@@ -76,7 +76,7 @@
 
     .form-group input:focus {
       border-color: #1f3a66;
-      box-shadow: 0 0 8px rgba(245, 197, 24, 0.5);
+      box-shadow: 0 0 6px rgba(245, 197, 24, 0.4);
       outline: none;
     }
 
@@ -102,7 +102,7 @@
       padding: 14px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(135deg, #1f3a66, #f5c518);
+      background-color: #1f3a66; /* Solid blue */
       color: #fff;
       font-size: 1.1em;
       font-weight: 600;
@@ -112,8 +112,9 @@
     }
 
     .btn-submit:hover {
+      background-color: #f5c518;
+      color: #0b1d3a;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(245, 197, 24, 0.4);
     }
 
     /* Error Message */

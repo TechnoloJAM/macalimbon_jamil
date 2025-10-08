@@ -6,6 +6,7 @@
   <title>Roberts Company | Users Info</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
     body {
@@ -31,10 +32,19 @@
       max-width: 1100px;
     }
 
-    h2 {
+    h1 {
       color: #ffffff;
       font-weight: 700;
+      text-align: center;
+      margin-bottom: 5px;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #ffffff;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
     .alert-light {
@@ -140,7 +150,9 @@
 
 <body>
   <div class="card p-4">
-    <h2 class="text-center mb-4">Roberts Company — <?= ($logged_in_user['role'] === 'admin') ? 'Admin Dashboard' : 'User Dashboard'; ?></h2>
+    <!-- Company Name -->
+    <h1>Roberts Company</h1>
+    <h2><?= ($logged_in_user['role'] === 'admin') ? 'Admin Dashboard' : 'User Dashboard'; ?></h2>
 
     <!-- Welcome -->
     <?php if(!empty($logged_in_user)): ?>
@@ -193,7 +205,7 @@
               <td>
                 <?php if ($logged_in_user['role'] === 'admin'): ?>
                   <a href="<?= site_url('/users/update/'.$user['id']);?>" class="btn btn-sm btn-warning">Update</a>
-                  <a href="<?= site_url('/users/delete/'.$user['id']);?>" class="btn btn-sm btn-danger">Delete</a>
+                  <button class="btn btn-sm btn-danger" onclick="confirmDelete(<?= $user['id']; ?>)">Delete</button>
                 <?php else: ?>
                   <span class="text-muted">View Only</span>
                 <?php endif; ?>
@@ -238,6 +250,24 @@
         window.location.href = "<?= site_url('users'); ?>";
       });
     });
+
+    // SweetAlert Delete Confirmation
+    function confirmDelete(id) {
+      Swal.fire({
+        title: 'Are you sure?',
+        text: "This action cannot be undone!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#B22222',
+        cancelButtonColor: '#1E3A8A',
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'Cancel'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = '<?= site_url("users/delete/") ?>' + id;
+        }
+      });
+    }
   </script>
 </body>
 </html>

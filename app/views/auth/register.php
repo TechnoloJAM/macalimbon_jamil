@@ -15,7 +15,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0b1d3a, #1f3a66);
+      background-color: #0b1d3a; /* Solid navy background */
       padding: 20px;
     }
 
@@ -23,11 +23,11 @@
       width: 100%;
       max-width: 460px;
       padding: 40px;
-      background: rgba(255, 255, 255, 0.08);
+      background-color: #ffffff15; /* Slight transparent white */
       backdrop-filter: blur(14px);
       border-radius: 20px;
-      border: 1px solid rgba(245, 197, 24, 0.3);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      border: 1px solid #f5c51850;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
       text-align: center;
       animation: fadeIn 0.5s ease-in-out;
     }
@@ -37,12 +37,22 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    h2 {
-      font-size: 2em;
+    .company-name {
+      font-size: 1.9em;
       font-weight: 700;
       color: #f5c518;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
       letter-spacing: 1px;
+      text-transform: uppercase;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 25px;
+      letter-spacing: 0.5px;
     }
 
     .form-group {
@@ -57,7 +67,7 @@
       padding: 12px 14px;
       border: 1.5px solid #f5c518;
       border-radius: 12px;
-      background: rgba(255, 255, 255, 0.9);
+      background: #ffffff;
       color: #0b1d3a;
       font-size: 15px;
       transition: 0.3s ease;
@@ -67,7 +77,7 @@
     .form-group input:focus,
     .form-group select:focus {
       border-color: #1f3a66;
-      box-shadow: 0 0 8px rgba(245, 197, 24, 0.5);
+      box-shadow: 0 0 6px rgba(245, 197, 24, 0.4);
       outline: none;
     }
 
@@ -93,7 +103,7 @@
       padding: 14px;
       border: none;
       border-radius: 12px;
-      background: linear-gradient(135deg, #1f3a66, #f5c518);
+      background-color: #1f3a66; /* Solid blue */
       color: #fff;
       font-size: 1.1em;
       font-weight: 600;
@@ -103,8 +113,9 @@
     }
 
     .btn-submit:hover {
+      background-color: #f5c518;
+      color: #0b1d3a;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(245, 197, 24, 0.4);
     }
 
     /* Error message */
@@ -147,6 +158,7 @@
 </head>
 <body>
   <div class="glass-container">
+    <div class="company-name">Roberts Company</div>
     <h2>Register</h2>
 
     <?php if (!empty($error)): ?>

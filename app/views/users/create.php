@@ -16,22 +16,21 @@
       min-height: 100vh;
       margin: 0;
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #0a1f44 40%, #1b3358 100%);
+      background-color: #0a1f44; /* Solid dark blue background */
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 30px;
+      color: #fff;
     }
 
     .card {
       border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(212, 175, 55, 0.5);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+      background-color: #1a2b4c; /* Slightly lighter navy tone */
+      border: 2px solid #d4af37;
       max-width: 480px;
       width: 100%;
-      color: #fff;
       padding: 2rem 2.5rem;
       animation: fadeIn 0.7s ease-in-out;
     }
@@ -39,6 +38,19 @@
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(15px);}
       to {opacity: 1; transform: translateY(0);}
+    }
+
+    .logo-header {
+      text-align: center;
+      margin-bottom: 1.2rem;
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .logo-header i {
+      color: #d4af37;
+      margin-right: 8px;
     }
 
     h2 {
@@ -61,14 +73,14 @@
       padding: 0.65rem 1rem;
       font-size: 1rem;
       color: #0a1f44;
-      background: rgba(255, 255, 255, 0.9);
-      transition: border-color 0.3s ease;
+      background-color: #ffffff;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     input:focus,
     select:focus {
-      border-color: #0a1f44;
-      box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+      border-color: #d4af37;
+      box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
       outline: none;
     }
 
@@ -96,25 +108,25 @@
     }
 
     .btn-create {
-      background: linear-gradient(135deg, #0a1f44, #d4af37);
+      background-color: #d4af37;
       border: none;
-      color: #fff;
+      color: #0a1f44;
       font-weight: 600;
       padding: 0.75rem;
       border-radius: 12px;
       width: 100%;
       font-size: 1.1rem;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
     }
 
     .btn-create:hover {
+      background-color: #b7952b;
       transform: translateY(-2px);
-      background: linear-gradient(135deg, #d4af37, #0a1f44);
     }
 
     .error-message {
-      background: rgba(255, 0, 0, 0.15);
+      background-color: rgba(255, 0, 0, 0.15);
       border: 1px solid rgba(255, 0, 0, 0.3);
       color: #ff4b4b;
       border-radius: 10px;
@@ -139,25 +151,13 @@
       border-radius: 10px;
       display: inline-block;
       transition: all 0.3s ease;
-      background: rgba(255, 255, 255, 0.1);
+      background-color: transparent;
     }
 
     .btn-back:hover {
-      background: #d4af37;
+      background-color: #d4af37;
       color: #0a1f44;
       text-decoration: none;
-    }
-
-    .logo-header {
-      text-align: center;
-      margin-bottom: 1.2rem;
-      font-size: 1.5rem;
-      color: #fff;
-    }
-
-    .logo-header i {
-      color: #d4af37;
-      margin-right: 8px;
     }
   </style>
 </head>
